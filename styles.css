@@ -1,0 +1,82 @@
+:root {
+    /* Colors */
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(212, 45%, 89%);
+    --grayish-blue: hsl(220, 15%, 55%);
+    --dark-blue: hsl(218, 44%, 22%);
+    
+    /* Typography */
+    /* Font size */
+    --body: 1.7rem;
+    /* Font family */
+
+    /* Font weight */
+    --medium: 400;
+    --bold: 700;
+}
+
+/* Restablish default values */
+* {
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+}
+
+/* Applying rem as default font unit and font family */
+html {
+    font-family: 'Outfit', sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--light-gray);
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Useful for vertical align */
+    height: 100vh;
+}
+
+.qr-card {
+    min-width: 300px;
+    max-width: 375px;
+    min-height: 500px;
+    max-height: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.qr-card__image {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.qr-card__image img{
+   max-width: 100%;
+   height: auto; 
+}
+
+.qr-card__text {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.qr-card__text--title {
+    font-size: 2.5rem;
+    font-weight: var(--bold);
+    color: var(--dark-blue);
+}
+
+.qr-card__text--description {
+    font-size: var(--body);
+    font-weight: var(--medium);
+    color: var(--grayish-blue);
+}
